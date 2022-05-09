@@ -3,6 +3,8 @@ import firstImg from "../images/landingimage1.webp";
 import secImg from "../images/menslanding.jpeg";
 import thirdImg from "../images/pexels-photo-4668565.jpeg";
 
+import Footer from "../components/Footer";
+
 const Landing = () => {
     return (
 			<LandingStyles>
@@ -30,6 +32,7 @@ const Landing = () => {
 						{/* <Button content="Shop Now" link="/products" /> */}
 					</div>
 				</div>
+				<Footer />
 			</LandingStyles>
 		);
 }
