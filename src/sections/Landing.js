@@ -4,6 +4,7 @@ import secImg from "../images/menslanding.jpeg";
 import thirdImg from "../images/pexels-photo-4668565.jpeg";
 
 import Footer from "../components/Footer";
+import Button from "../components/Button";
 
 const Landing = () => {
     return (
@@ -15,21 +16,21 @@ const Landing = () => {
 							Explore Our 2022
 							<br /> Jewelry Collection
 						</h1>
-						{/* <Button content="Shop Now" link="/products" /> */}
+						<Button content="Shop Now" link="/products" />
 					</div>
 				</div>
 				<div className="second container">
 					<img src={secImg} alt="male model leaning on car" className="img-two" />
 					<div className="content-two">
 						<h1>All new in mens wear</h1>
-						{/* <Button content="Shop Now" link="/products" /> */}
+						<Button content="Shop Now" link="/products" />
 					</div>
 				</div>
 				<div className="container three">
 					<img src={thirdImg} alt="female model with flower shirt and bag" />
 					<div className="content-three">
 						<h1>Spring trends for women</h1>
-						{/* <Button content="Shop Now" link="/products" /> */}
+						<Button content="Shop Now" link="/products" />
 					</div>
 				</div>
 				<Footer />
