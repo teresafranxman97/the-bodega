@@ -17,7 +17,7 @@ const ButtonStyles = styled.div`
 	}
 
 	@media screen and (max-width: 425px) {
-		width: 97%;
+		width: 90%;
 	}
 `;
 

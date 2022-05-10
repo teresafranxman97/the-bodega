@@ -7,7 +7,7 @@ const NavStyles = styled.div`
 	flex-direction: ${({ isOpen }) => (isOpen ? "column" : "row")};
 	padding-top: 0.85rem;
 	align-items: end;
-	position: ${({ isOpen }) => (isOpen ? "unset" : "fixed")};
+	position: ${({ isOpen }) => (isOpen ? "unset" : "relative")};
 	top: 0;
 	left: 0;
 	right: 0;
@@ -19,6 +19,11 @@ const NavStyles = styled.div`
 		text-decoration: none;
 		color: #111111;
 		font-weight: 400;
+	}
+
+	@media screen and (min-width: 1440px) {
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 `;
 const Logo = styled.div`

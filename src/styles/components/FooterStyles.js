@@ -5,7 +5,7 @@ const FooterStyles = styled.div`
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	padding: 2rem 0;
+	padding: 4rem 0;
 	width: 100%;
 
 	a {

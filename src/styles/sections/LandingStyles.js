@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const LandingStyles = styled.div`
-	padding-top: 6rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -31,8 +30,8 @@ const LandingStyles = styled.div`
 	}
 
 	img {
-		width: 100%;
-		height: 100%;
+		width: 98%;
+		height: 98%;
 		object-fit: cover;
 		filter: brightness(0.9);
 	}
@@ -84,6 +83,10 @@ const LandingStyles = styled.div`
 	@media screen and (max-width: 445px) {
 		.content-three {
 			top: 278vh;
+		}
+
+		img {
+			width: 95%;
 		}
 	}
 
