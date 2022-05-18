@@ -2,7 +2,6 @@ import LandingStyles from "../styles/sections/LandingStyles";
 import firstImg from "../images/landingimage1.webp";
 import secImg from "../images/menslanding.jpeg";
 import thirdImg from "../images/pexels-photo-4668565.jpeg";
-
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 

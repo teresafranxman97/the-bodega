@@ -83,28 +83,25 @@ const Card = styled.div`
 
 	a {
 		text-decoration: none;
-		color: #ffffff;
-		background: #111111;
-		border: 2px solid #111111;
-		width: 40%;
-		text-align: center;
-		font-size: 18px;
-		font-weight: 200;
-		letter-spacing: 2px;
-		border-radius: 5px;
-		padding: 4px 7px;
+		color: #111111;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 100%;
 	}
 
 	h4 {
 		font-weight: 300;
 		margin: 0.5rem 0;
+		font-size: 14px;
 	}
 
 	p {
 		font-weight: 600;
+		font-size: 14px;
 	}
 
-	@media screen and (max-width: 769px) {
+	@media screen and (max-width: 768px) {
 		.image-container {
 			height: 30vh;
 		}
@@ -119,11 +116,11 @@ const Buttons = styled.div`
 
 	button {
 		cursor: pointer;
-		padding: 7px 10px;
-		font-size: 12px;
+		padding: 19px 10px;
+		font-size: 14px;
 		font-family: poppins;
 		background: transparent;
-		border: 2px solid #f1f1f1;
+		border: 1px solid #f1f1f1;
 	}
 
 	.drop-down-button {
@@ -138,19 +135,19 @@ const Buttons = styled.div`
 		gap: 0.5rem;
 	}
 
-	@media screen and (min-width: 769px) {
+	@media screen and (min-width: 770px) {
 		.drop-down-button {
 			display: none;
 		}
 	}
 
-	@media screen and (max-width: 769px) {
+	@media screen and (max-width: 768px) {
 		flex-direction: column;
 	}
 `;
 
 const Menu = styled.div`
-	@media screen and (max-width: 769px) {
+	@media screen and (max-width: 768px) {
 		display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
 		flex-direction: column;
 	}

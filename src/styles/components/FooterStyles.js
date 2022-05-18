@@ -48,11 +48,11 @@ const FooterStyles = styled.div`
 
 	@media screen and (min-width: 768px) {
 		justify-content: center;
-		gap: 4rem;
+		gap: 12rem;
 	}
 
 	@media screen and (min-width: 1023px) {
-		gap: 11rem;
+		gap: 18rem;
 	}
 `;
 

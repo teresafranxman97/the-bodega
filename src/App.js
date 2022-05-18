@@ -13,9 +13,8 @@ function App() {
 
 			<Routes>
 				<Route exact path="/" element={<Landing />} />
-				<Route path="/products" element={<Products />}>
-					<Route path=":id" element={<Product />} />
-				</Route>
+				<Route path="products" element={<Products />} />
+				<Route path="products/:id" element={<Product />} />
 			</Routes>
 			<GlobalStyle />
 		</AppStyles>
