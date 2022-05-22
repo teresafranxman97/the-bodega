@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const NavStyles = styled.div`
 	background: ${({ isOpen }) => (isOpen ? "#FFFFFF" : "#ffffff4f")};
+	border-bottom: 1px solid #f1f1f1;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: ${({ isOpen }) => (isOpen ? "column" : "row")};
@@ -59,7 +60,6 @@ const MenuLink = styled.div`
 const Icons = styled.div`
 	gap: 1rem;
 	display: flex;
-	width: ${({ isOpen }) => (isOpen ? "100vw" : "")};
 	justify-content: center;
 `;
 

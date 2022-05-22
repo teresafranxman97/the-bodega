@@ -3,24 +3,21 @@ import styled from "styled-components";
 const ProductsStyles = styled.main`
 	height: 100%;
 	font-family: "Poppins";
-	padding: 5rem;
-
-	@media screen and (max-width: 1023px) {
-		padding: 3rem;
-	}
-
-	@media screen and (max-width: 425px) {
-		padding: 1rem;
-	}
 `;
 
 const Container = styled.div`
 	display: flex;
 	gap: 2rem;
 	margin-bottom: 18vh;
+	padding: 5rem;
 
 	@media screen and (max-width: 1023px) {
 		flex-direction: column;
+		padding: 3rem;
+	}
+
+	@media screen and (max-width: 768px) {
+		padding: 1rem;
 	}
 `;
 
@@ -35,25 +32,31 @@ const Content = styled.div`
 	}
 
 	h1 {
-		font-size: 16px;
-		font-weight: 600;
+		font-size: 18px;
+		font-weight: 300;
 	}
 
 	.price {
-		font-size: 16px;
-		font-weight: 500;
+		font-size: 18px;
+		font-weight: 600;
 	}
 
 	.description {
-		font-size: 14px;
+		font-size: 15px;
 		letter-spacing: 1px;
 		padding: 1rem 0;
+		color: #868686;
+		font-weight: 300;
 	}
 
 	@media screen and (min-width: 1023px) {
 		h1 {
-			font-size: 18px;
+			font-size: 20px;
 		}
+	}
+
+	@media screen and (min-width: 425px) {
+		height: 55vh;
 	}
 
 	@media screen and (max-width: 1023px) {
@@ -93,4 +96,24 @@ const Buttons = styled.div`
 	}
 `;
 
-export { Container, Content, ProductsStyles, Buttons };
+const Nav = styled.div`
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	color: #b0b0b0;
+	font-size: 14px;
+	padding: 1rem;
+
+	.arrow {
+		display: flex;
+		align-items: end;
+	}
+
+	a {
+		text-decoration: none;
+		color: #b0b0b0;
+	}
+`;
+
+export { Container, Content, ProductsStyles, Buttons, Nav };

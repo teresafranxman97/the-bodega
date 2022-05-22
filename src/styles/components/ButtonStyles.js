@@ -4,14 +4,14 @@ const ButtonStyles = styled.div`
 	cursor: pointer;
 	background: #111111;
 	width: 15rem;
-	padding: 10px 20px;
+	padding: 15px 30px;
 	text-align: center;
 	border-radius: 5px;
 
 	a {
 		color: white;
 		text-decoration: none;
-		font-size: 17px;
+		font-size: 19px;
 		font-weight: 200;
 		letter-spacing: 5px;
 	}

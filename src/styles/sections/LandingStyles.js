@@ -30,10 +30,10 @@ const LandingStyles = styled.div`
 	}
 
 	img {
-		width: 98%;
-		height: 98%;
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
-		filter: brightness(0.9);
+		filter: brightness(0.8);
 	}
 
 	.content-two {
@@ -83,10 +83,6 @@ const LandingStyles = styled.div`
 	@media screen and (max-width: 445px) {
 		.content-three {
 			top: 278vh;
-		}
-
-		img {
-			width: 95%;
 		}
 	}
 

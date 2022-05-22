@@ -14,6 +14,7 @@ const Products = () => {
 	const [products, setProducts] = useState([]);
 	const [filter, setFilter] = useState(products);
 	const [loading, setLoading] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -34,7 +35,6 @@ const Products = () => {
 		);
 		setFilter(filteredList);
 	};
-	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<ProductsStyles>
