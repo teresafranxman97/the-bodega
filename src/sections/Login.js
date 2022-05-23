@@ -6,13 +6,13 @@ import {
 	Buttons,
 } from "../styles/sections/LoginStyles";
 
-const state = {
+const defaultValues = {
 	email: "",
 	password: "",
 };
 
 const Login = () => {
-	const [values, setValues] = useState(state);
+	const [values, setValues] = useState(defaultValues);
 
 	return (
 		<LoginStyles>
@@ -21,8 +21,10 @@ const Login = () => {
 			</div>
 			<Container>
 				<form>
-					<input type="email" placeholder="E-Mail" name="email" />
-					<input type="password" placeholder="Password" name="password" />
+					<label>E-Mail</label>
+					<input type="email" name="email" />
+					<label>Password</label>
+					<input type="password" name="password" />
 					<div className="form-content">
 						<div className="checkbox">
 							<input type="checkbox" name="checkbox" />

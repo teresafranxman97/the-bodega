@@ -50,24 +50,34 @@ const Container = styled.div`
 		padding: 15px;
 		font-family: "Poppins";
 		font-size: 16px;
-		border: 1px solid #e5e5e5;
+		border: 1px solid #dddddd;
+		border-radius: 5px;
 	}
 
 	.form-content {
 		display: flex;
 		justify-content: space-between;
+		gap: 0.5rem;
 	}
 
-	label {
-		font-size: 14px;
-		font-weight: 500;
+	.checkbox {
+		display: flex;
+		align-items: center;
+
+		label {
+			color: #111111;
+		}
 	}
 
 	a {
 		text-decoration: none;
 		color: #111111;
-		font-weight: 500;
 		font-size: 14px;
+	}
+
+	label {
+		font-size: 14px;
+		color: #868686;
 	}
 
 	input[type="button"] {
@@ -75,7 +85,7 @@ const Container = styled.div`
 		background: #111111;
 		color: white;
 		border: 1px solid #111111;
-		border-radius: 4px;
+		border-radius: 5px;
 		font-size: 16px;
 	}
 
@@ -89,6 +99,13 @@ const Container = styled.div`
 
 	@media screen and (max-width: 425px) {
 		width: 100%;
+	}
+
+	@media screen and (max-width: 300px) {
+		label,
+		.link a {
+			font-size: 12px;
+		}
 	}
 `;
 

@@ -3,10 +3,10 @@ import styled from "styled-components";
 const SignupStyles = styled.main`
 	font-family: poppins;
 	padding: 3rem 1rem;
-	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 0.5rem;
 
 	.title {
 		width: 40%;
@@ -14,12 +14,7 @@ const SignupStyles = styled.main`
 		h1 {
 			text-align: left;
 			font-weight: 500;
-		}
-	}
-
-	@media screen and (max-width: 1024px) {
-		.title {
-			width: 50%;
+			font-size: 24px;
 		}
 	}
 
@@ -51,7 +46,8 @@ const Container = styled.div`
 		padding: 15px;
 		font-family: "Poppins";
 		font-size: 16px;
-		border: 1px solid #e5e5e5;
+		border: 1px solid #dddddd;
+		border-radius: 5px;
 	}
 
 	input[type="button"] {
@@ -59,8 +55,18 @@ const Container = styled.div`
 		background: #111111;
 		color: white;
 		border: 1px solid #111111;
-		border-radius: 4px;
+		border-radius: 5px;
 		font-size: 16px;
+	}
+
+	label {
+		font-size: 14px;
+		color: #868686;
+	}
+
+	.checkbox,
+	label {
+		color: #111111;
 	}
 
 	span {

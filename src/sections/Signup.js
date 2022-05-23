@@ -1,4 +1,8 @@
-import { SignupStyles, Container, Buttons } from "../styles/sections/SignupStyles";
+import {
+	SignupStyles,
+	Container,
+	Buttons,
+} from "../styles/sections/SignupStyles";
 
 const Signup = () => {
 	return (
@@ -8,14 +12,18 @@ const Signup = () => {
 			</div>
 			<Container>
 				<form>
-					<input type="text" placeholder="First Name" name="firstName" />
-					<input type="text" placeholder="Last Name" name="lastName" />
-					<input type="email" placeholder="E-Mail" name="email" />
-					<input type="password" placeholder="Password" name="password" />
+					<label>First Name</label>
+					<input type="text" name="firstName" />
+					<label>Last Name</label>
+					<input type="text" name="lastName" />
+					<label>E-Mail</label>
+					<input type="email" name="email" />
+					<label>Password</label>
+					<input type="password" name="password" />
 					<div className="checkbox">
 						<input type="checkbox" name="checkbox" />
 						<label>
-							I agree to <span>Terms & Conditions</span> and 
+							I agree to <span>Terms & Conditions</span> and
 							<span> Privacy Policy</span>
 						</label>
 					</div>
