@@ -56,7 +56,7 @@ const Container = styled.div`
 		border-radius: 5px;
 	}
 
-	input[type="button"] {
+	input[type="submit"] {
 		padding: 15px;
 		background: #111111;
 		color: white;

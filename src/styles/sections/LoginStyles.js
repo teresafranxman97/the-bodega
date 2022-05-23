@@ -86,7 +86,7 @@ const Container = styled.div`
 		color: #868686;
 	}
 
-	input[type="button"] {
+	input[type="submit"] {
 		padding: 15px;
 		background: #111111;
 		color: white;
