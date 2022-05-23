@@ -12,14 +12,22 @@ const Signup = () => {
 			</div>
 			<Container>
 				<form>
-					<label>First Name</label>
-					<input type="text" name="firstName" />
-					<label>Last Name</label>
-					<input type="text" name="lastName" />
-					<label>E-Mail</label>
-					<input type="email" name="email" />
-					<label>Password</label>
-					<input type="password" name="password" />
+					<label className="label-wrapper">
+						First Name
+						<input type="text" name="firstName" />
+					</label>
+					<label className="label-wrapper">
+						Last Name
+						<input type="text" name="lastName" />
+					</label>
+					<label className="label-wrapper">
+						E-Mail
+						<input type="email" name="email" />
+					</label>
+					<label className="label-wrapper">
+						Password
+						<input type="password" name="password" />
+					</label>
 					<div className="checkbox">
 						<input type="checkbox" name="checkbox" />
 						<label>

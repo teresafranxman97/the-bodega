@@ -21,10 +21,14 @@ const Login = () => {
 			</div>
 			<Container>
 				<form>
-					<label>E-Mail</label>
-					<input type="email" name="email" />
-					<label>Password</label>
-					<input type="password" name="password" />
+					<label className="label-wrapper">
+						E-Mail
+						<input type="email" name="email" />
+					</label>
+					<label className="label-wrapper">
+						Password
+						<input type="password" name="password" />
+					</label>
 					<div className="form-content">
 						<div className="checkbox">
 							<input type="checkbox" name="checkbox" />

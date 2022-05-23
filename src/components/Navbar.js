@@ -54,7 +54,7 @@ const Navbar = () => {
 				<Link to="login">
 					<Icon icon="bxs:user" width={22} />
 				</Link>
-				<Link to="/">
+				<Link to="cart">
 					<Icon icon="akar-icons:shopping-bag" width={22} />
 				</Link>
 			</Icons>

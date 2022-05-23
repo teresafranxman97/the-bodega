@@ -5,6 +5,9 @@ import Signup from "./sections/Signup";
 import Login from "./sections/Login";
 import Navbar from "./components/Navbar";
 import Product from "./components/Product";
+import About from "./sections/About";
+import Contact from "./sections/Contact";
+import Cart from "./sections/Cart";
 
 import { AppStyles, GlobalStyle } from "./styles/GlobalStyles";
 
@@ -19,6 +22,9 @@ function App() {
 				<Route path="products" element={<Products />} />
 				<Route path="products/:id" element={<Product />} />
 				<Route path="signup" element={<Signup />} />
+				<Route path="about" element={<About />} />
+				<Route path="contact" element={<Contact/>} />
+				<Route path="cart" element={<Cart/>} />
 			</Routes>
 			<GlobalStyle />
 		</AppStyles>

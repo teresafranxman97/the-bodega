@@ -40,6 +40,12 @@ const Container = styled.div`
 		gap: 1rem;
 	}
 
+	.label-wrapper {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 0.5rem;
+	}
+
 	input[type="text"],
 	input[type="email"],
 	input[type="password"] {
@@ -57,6 +63,7 @@ const Container = styled.div`
 		border: 1px solid #111111;
 		border-radius: 5px;
 		font-size: 16px;
+		cursor: pointer;
 	}
 
 	label {
