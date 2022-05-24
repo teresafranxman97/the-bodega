@@ -173,7 +173,7 @@ const Footer = styled.div`
 
 	.icons {
 		background: #f3f3f3;
-		padding: 5rem;
+		padding: 5rem 10rem;
 	}
 
 	.icon {
@@ -196,7 +196,7 @@ const Footer = styled.div`
 
 	@media screen and (max-width: 425px) {
 		.icons {
-			padding: 1rem;
+			padding: 5rem 1rem;
 		}
 	}
 `;
