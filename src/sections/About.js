@@ -7,7 +7,9 @@ import {
 	Banner,
 	Content,
 	Container,
+	Footer,
 } from "../styles/sections/AboutStyles";
+import { Icon } from "@iconify/react";
 
 const About = () => {
 	return (
@@ -29,12 +31,12 @@ const About = () => {
 					nostra, per inceptos himenaeos. Praesent auctor purus luctus enim
 					egestas, ac scelerisque ante pulvinar.
 					<br />
-						Pellentesque feugiat egestas ipsum et scelerisque. Praesent eu purus
-						blandit, pharetra orci a, eleifend urna. Donec diam lacus, posuere
-						sed hendrerit eget, condimentum sed velit. Vestibulum ante ipsum
-						primis in faucibus orci luctus et ultrices posuere cubilia curae; In
-						eu maximus augue, dapibus maximus massa. Integer nunc ex,
-						condimentum mattis nunc id, mollis varius nisi.
+					Pellentesque feugiat egestas ipsum et scelerisque. Praesent eu purus
+					blandit, pharetra orci a, eleifend urna. Donec diam lacus, posuere sed
+					hendrerit eget, condimentum sed velit. Vestibulum ante ipsum primis in
+					faucibus orci luctus et ultrices posuere cubilia curae; In eu maximus
+					augue, dapibus maximus massa. Integer nunc ex, condimentum mattis nunc
+					id, mollis varius nisi.
 				</p>
 			</Content>
 			<Container>
@@ -102,6 +104,25 @@ const About = () => {
 					egestas, ac scelerisque ante pulvinar.{" "}
 				</p>
 			</Content>
+			<Footer>
+				<div className="title">
+					<h2>WHY CHOOSE US</h2>
+				</div>
+				<div className="icons">
+					<div className="icon">
+						<h3>FAST & RELIABLE SHIPPING</h3>
+						<Icon icon="akar-icons:shipping-box-01" width={30} />
+					</div>
+					<div className="icon">
+						<h3>24 HOUR CUSTOMER SERVICE</h3>
+						<Icon icon="carbon:user-service-desk" width={30} />
+					</div>
+					<div className="icon">
+						<h3>30 DAY RETURNS & EXCHANGES</h3>
+						<Icon icon="fluent:tag-reset-20-regular" width={30} />
+					</div>
+				</div>
+			</Footer>
 		</AboutStyles>
 	);
 };

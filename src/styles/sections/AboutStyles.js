@@ -84,7 +84,7 @@ const Container = styled.div`
 	h3 {
 		margin-top: 0;
 		border-bottom: 1px solid #efefef;
-		width: 50%;
+		width: 70%;
 		font-size: 24px;
 		font-weight: 400;
 	}
@@ -157,4 +157,48 @@ const Content = styled.div`
 	}
 `;
 
-export { AboutStyles, Banner, Container, Content };
+const Footer = styled.div`
+	.title {
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	h2 {
+		font-weight: 400;
+		width: 80%;
+		border-bottom: 1px solid #efefef;
+	}
+
+	.icons {
+		background: #f3f3f3;
+		padding: 5rem;
+	}
+
+	.icon {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #e7e7e7;
+	}
+
+	h3 {
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	@media screen and (max-width: 768px) {
+		.icons {
+			padding: 3rem;
+		}
+	}
+
+	@media screen and (max-width: 425px) {
+		.icons {
+			padding: 1rem;
+		}
+	}
+`;
+
+export { AboutStyles, Banner, Container, Content, Footer };
