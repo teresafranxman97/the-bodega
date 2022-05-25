@@ -9,6 +9,7 @@ const Container = styled.div`
 	display: flex;
 	gap: 2rem;
 	margin-bottom: 18vh;
+	justify-content: center;
 	padding: 5rem;
 
 	@media screen and (max-width: 1023px) {
@@ -22,7 +23,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-	width: 50vw;
+	width: 50rem;
 
 	img {
 		width: 100%;

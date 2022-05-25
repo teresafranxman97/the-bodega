@@ -2,13 +2,11 @@ import styled from "styled-components";
 
 const ContactStyles = styled.main`
 	min-height: 100vh;
-	min-height: 65vh;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	font-family: "Poppins";
 	flex-direction: column;
 	align-items: center;
-	padding: 1rem;
 
 	.title {
 		width: 50rem;
@@ -17,6 +15,7 @@ const ContactStyles = styled.main`
 	h1 {
 		text-align: left;
 		font-weight: 400;
+		font-size: 26px;
 	}
 
 	form {
@@ -24,6 +23,9 @@ const ContactStyles = styled.main`
 		display: flex;
 		flex-direction: column;
 		align-items: baseline;
+		gap: 1rem;
+		border: 1px solid #e9e9e9;
+		padding: 15px;
 	}
 
 	label {
@@ -36,7 +38,7 @@ const ContactStyles = styled.main`
 
 	input[type="text"],
 	input[type="email"] {
-		padding: 10px;
+		padding: 15px;
 		border: 1px solid #dddddd;
 		border-radius: 5px;
 	}
@@ -48,7 +50,7 @@ const ContactStyles = styled.main`
 	}
 
 	input[type="submit"] {
-		padding: 10px;
+		padding: 15px;
 		background: #111111;
 		color: white;
 		border: 1px solid #111111;
@@ -60,7 +62,7 @@ const ContactStyles = styled.main`
 	@media screen and (max-width: 1024px) {
 		.title,
 		form {
-			width: 70%;
+			width: 80%;
 		}
 	}
 
@@ -72,4 +74,12 @@ const ContactStyles = styled.main`
 	}
 `;
 
-export default ContactStyles;
+const Wrapper = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3rem 1rem;
+`;
+
+export { ContactStyles, Wrapper };

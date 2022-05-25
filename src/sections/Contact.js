@@ -1,5 +1,8 @@
-import React, { useState } from "react";
-import ContactStyles from "../styles/sections/ContactStyles";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+import { ContactStyles, Wrapper } from "../styles/sections/ContactStyles";
+import Footer from "../components/Footer";
 
 const defaultValues = {
 	user_name: "",
@@ -8,40 +11,55 @@ const defaultValues = {
 };
 
 const Contact = () => {
-	const [values, setValues] = useState(defaultValues);
+	const [values] = useState(defaultValues);
+	const form = useRef();
 
-    const handleChange = (e) => {
-        setValues({
-            ...values,
-            [e.target.value]: e.target.name
-        })
-    }
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				"service_1gaftse",
+				"contact_form",
+				form.current,
+				"user_08idYLJZO7AtHuPUQ55EA"
+			)
+			.then((result) => {
+				alert("Your message was sent successfully");
+			})
+			.catch((error) => {
+				console.log(error.text);
+			});
+	};
 
 	return (
 		<ContactStyles>
-			<div className="title">
-				<h1>Contact us</h1>
-			</div>
-			<form>
-				<label>
-					Name
-					<input type="text" name="user_name" onChange={handleChange} />
-				</label>
-				<label>
-					E-Mail
-					<input type="email" name="user_email" onChange={handleChange} />
-				</label>
-				<label>
-					Message
-					<textarea name="message" onChange={handleChange} />
-					<input
-						type="submit"
-						placeholder="Submit"
-						name="submit"
-						value="Send"
-					/>
-				</label>
-			</form>
+			<Wrapper>
+				<div className="title">
+					<h1>Contact us</h1>
+				</div>
+				<form ref={form} onSubmit={sendEmail}>
+					<label>
+						Name
+						<input type="text" name="user_name" />
+					</label>
+					<label>
+						E-Mail
+						<input type="email" name="user_email" />
+					</label>
+					<label>
+						Message
+						<textarea name="message" />
+						<input
+							type="submit"
+							placeholder="Submit"
+							name="submit"
+							value="Send"
+						/>
+					</label>
+				</form>
+			</Wrapper>
+			<Footer />
 		</ContactStyles>
 	);
 };
