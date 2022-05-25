@@ -31,7 +31,7 @@ const Signup = () => {
 	return (
 		<SignupStyles>
 			<div className="title">
-				<h1>Create Account</h1>
+				<h1>CREATE ACCOUNT</h1>
 			</div>
 			<Container>
 				<form onSubmit={handleSubmit}>

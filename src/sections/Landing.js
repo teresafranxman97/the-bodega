@@ -12,8 +12,8 @@ const Landing = () => {
 					<img src={firstImg} alt="" />
 					<div className="content">
 						<h1>
-							Explore Our 2022
-							<br /> Jewelry Collection
+							EXPLORE OUR 2022
+							<br /> JEWELERY COLLECTION
 						</h1>
 						<Button content="Shop Now" link="/products" />
 					</div>
@@ -21,14 +21,14 @@ const Landing = () => {
 				<div className="second container">
 					<img src={secImg} alt="male model leaning on car" className="img-two" />
 					<div className="content-two">
-						<h1>All new in mens wear</h1>
+						<h1>ALL NEW IN MENS WEAR</h1>
 						<Button content="Shop Now" link="/products" />
 					</div>
 				</div>
 				<div className="container three">
 					<img src={thirdImg} alt="female model with flower shirt and bag" />
 					<div className="content-three">
-						<h1>Spring trends for women</h1>
+						<h1>SPRING TRENDS FOR WOMEN</h1>
 						<Button content="Shop Now" link="/products" />
 					</div>
 				</div>

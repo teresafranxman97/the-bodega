@@ -30,7 +30,7 @@ const Login = () => {
 	return (
 		<LoginStyles>
 			<div className="title">
-				<h1>Log In</h1>
+				<h1>LOG IN</h1>
 			</div>
 			<Container>
 				<form onSubmit={handleSubmit}>

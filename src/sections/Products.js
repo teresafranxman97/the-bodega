@@ -39,7 +39,7 @@ const Products = () => {
 	return (
 		<ProductsStyles>
 			<div className="title">
-				<h1>Latest Products</h1>
+				<h1>LATEST PRODUCTS</h1>
 			</div>
 			{loading ? (
 				<Loading loading={loading} />
