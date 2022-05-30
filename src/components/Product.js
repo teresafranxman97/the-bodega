@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
 import { Icon } from "@iconify/react";
@@ -9,28 +8,16 @@ import {
 	Buttons,
 	Nav,
 } from "../styles/components/ProductStyles";
+import { useGetProductByIdQuery } from "../features/api/api";
 
 const Product = () => {
 	const { id } = useParams();
-	const [product, setProduct] = useState([]);
-	const [loading, setLoading] = useState(false);
-
-	useEffect(() => {
-		const fetchProductData = async () => {
-			setLoading(true);
-			const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-			const data = await response.json();
-			setLoading(false);
-			setProduct(data);
-		};
-
-		fetchProductData();
-	}, [id]);
+	const { data: product, isLoading } = useGetProductByIdQuery(id);
 
 	return (
 		<ProductsStyles>
-			{loading ? (
-				<Loading loading={loading} />
+			{isLoading ? (
+				<Loading isLoading={isLoading} />
 			) : (
 				<div>
 					<Nav>
@@ -52,7 +39,6 @@ const Product = () => {
 						<Content>
 							<h1>{product.title}</h1>
 							<p className="price">${product.price}</p>
-							{/* <p style={{ fontWeight: '500' }}> Rating: {product.rating.rate}</p> */}
 							<p className="description">{product.description}</p>
 							<Buttons>
 								<button className="amount">

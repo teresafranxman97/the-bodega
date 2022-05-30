@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 
-const Loading = ({ loading }) => {
+const Loading = ({ isLoading }) => {
 	return (
 		<div style={{ display: "flex", justifyContent: "center" }}>
 			<Icon

@@ -68,7 +68,6 @@ const Card = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	border: 1px solid #ededed;
 	padding: 10px;
 
 	.image-container {
@@ -113,6 +112,8 @@ const Buttons = styled.div`
 	justify-content: center;
 	gap: ${({ isOpen }) => (isOpen ? "0" : "1rem")};
 	margin: 2rem 0;
+	align-items: center;
+	flex-direction: column;
 
 	button {
 		cursor: pointer;
@@ -150,6 +151,7 @@ const Menu = styled.div`
 	@media screen and (max-width: 768px) {
 		display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
 		flex-direction: column;
+		width: 100%;
 	}
 `;
 
