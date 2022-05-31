@@ -9,25 +9,16 @@ import {
 	Menu,
 } from "../styles/sections/ProductsStyles";
 import Loading from "../components/Loading";
+import { useGetAllProductsQuery } from "../features/api/api";
 
 const Products = () => {
-	const [products, setProducts] = useState([]);
+	const { data: products, isLoading } = useGetAllProductsQuery();
 	const [filter, setFilter] = useState(products);
-	const [loading, setLoading] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
-		const fetchData = async () => {
-			setLoading(true);
-			const res = await fetch("https://fakestoreapi.com/products");
-			const data = await res.json();
-
-			setProducts(data);
-			setFilter(data);
-			setLoading(false);
-		};
-		fetchData();
-	}, []);
+		setFilter(products);
+	}, [products]);
 
 	const filterProduct = (selectedCategory) => {
 		const filteredList = products.filter(
@@ -41,10 +32,10 @@ const Products = () => {
 			<div className="title">
 				<h1>LATEST PRODUCTS</h1>
 			</div>
-			{loading ? (
-				<Loading loading={loading} />
+			{isLoading ? (
+				<Loading isLoading={isLoading} />
 			) : (
-				<>
+				<section>
 					<Buttons isOpen={isOpen}>
 						<button
 							className="drop-down-button"
@@ -69,19 +60,37 @@ const Products = () => {
 						</Menu>
 					</Buttons>
 					<GridContainer>
-						{filter.map((product) => (
-							<Card key={product.id}>
-								<Link to={`${product.id}`}>
-									<div className="image-container">
-										<img src={product.image} alt={product.title} />
-									</div>
-									<h4>{product.title}</h4>
-									<p>${product.price}</p>
-								</Link>
-							</Card>
-						))}
+						{filter ? (
+							<>
+								{filter.map((product) => (
+									<Card key={product.id}>
+										<Link to={`${product.id}`}>
+											<div className="image-container">
+												<img src={product.image} alt={product.title} />
+											</div>
+											<h4>{product.title}</h4>
+											<p>${product.price}</p>
+										</Link>
+									</Card>
+								))}
+							</>
+						) : (
+							<>
+								{products.map((product) => (
+									<Card key={product.id}>
+										<Link to={`${product.id}`}>
+											<div className="image-container">
+												<img src={product.image} alt={product.title} />
+											</div>
+											<h4>{product.title}</h4>
+											<p>${product.price}</p>
+										</Link>
+									</Card>
+								))}
+							</>
+						)}
 					</GridContainer>
-				</>
+				</section>
 			)}
 		</ProductsStyles>
 	);
