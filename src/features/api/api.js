@@ -5,11 +5,11 @@ export const api = createApi({
 	baseQuery: fetchBaseQuery({ baseUrl: "https://fakestoreapi.com" }),
 	endpoints: (build) => ({
 		getAllProducts: build.query({
-			query: () => ('/products')
+			query: () => "/products",
 		}),
 		getProductById: build.query({
-			query: (id) => ({ url: `/products/${id}`})
-		})
+			query: (id) => ({ url: `/products/${id}` }),
+		}),
 	}),
 });
 

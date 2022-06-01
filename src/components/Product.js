@@ -8,18 +8,26 @@ import {
 	Buttons,
 	Nav,
 } from "../styles/components/ProductStyles";
+
+import { addToCart } from "../features/cart/cartSlice";
+import { useDispatch } from "react-redux";
 import { useGetProductByIdQuery } from "../features/api/api";
 
 const Product = () => {
 	const { id } = useParams();
 	const { data: product, isLoading } = useGetProductByIdQuery(id);
+	const dispatch = useDispatch();
+
+	const handleAddToCart = (product) => {
+		dispatch(addToCart(product))
+	};
 
 	return (
 		<ProductsStyles>
 			{isLoading ? (
 				<Loading isLoading={isLoading} />
 			) : (
-				<div>
+				<section>
 					<Nav>
 						<a href="/products" className="arrow">
 							<Icon
@@ -46,11 +54,13 @@ const Product = () => {
 									0
 									<Icon icon="bx:plus" />
 								</button>
-								<button className="cart">Add to cart</button>
+								<button className="cart" onClick={() => handleAddToCart(product)}>
+									Add to cart
+								</button>
 							</Buttons>
 						</Content>
 					</Container>
-				</div>
+				</section>
 			)}
 		</ProductsStyles>
 	);

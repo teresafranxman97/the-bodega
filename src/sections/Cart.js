@@ -1,14 +1,21 @@
 import { useSelector } from "react-redux";
+import CartItem from "../components/CartItem";
 
 const Cart = () => {
-    const { amount, total } = useSelector((store) => store.cart);
+	const { cartItems, amount, total } = useSelector((store) => store.cart);
 
-    return (
-			<main>
-				<div className="title">
-					<h1>YOUR SHOPPING CART</h1>
-				</div>
-				<div className="summary-container">
+	return (
+		<main>
+			<header className="title">
+				<h1>YOUR SHOPPING CART</h1>
+			</header>
+			<div className="body">
+				<section>
+					{cartItems.map((item) => {
+						return <CartItem key={item.id} {...item} />;
+					})}
+				</section>
+				<section className="summary-container">
 					<h3>Order Summary</h3>
 					<div className="cost-container">
 						<h4>Subtotal</h4>
@@ -26,10 +33,11 @@ const Cart = () => {
 						<h4>Total</h4>
 						<p>${total}</p>
 					</div>
-                    <button className="checkout-btn">CHECKOUT</button>
-				</div>
-			</main>
-		);
+					<button className="checkout-btn">CHECKOUT</button>
+				</section>
+			</div>
+		</main>
+	);
 };
 
 export default Cart;
