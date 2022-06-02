@@ -94,6 +94,9 @@ const Buttons = styled.div`
 		padding: 10px 20px;
 		border-radius: 5px;
 		width: 100%;
+		letter-spacing: 1px;
+		font-weight: 200;
+		font-family: poppins;
 	}
 `;
 

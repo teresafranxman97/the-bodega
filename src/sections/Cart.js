@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
 import {
 	EmptyCart,
@@ -18,7 +19,7 @@ const Cart = () => {
 		return (
 			<EmptyCart>
 				<h1>Your shopping cart is empty</h1>
-				<button>Start shopping</button>
+				<Link to="/products"><button>Start shopping</button></Link>
 			</EmptyCart>
 		);
 	}

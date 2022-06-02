@@ -9,17 +9,22 @@ import {
 	Nav,
 } from "../styles/components/ProductStyles";
 
-import { addToCart } from "../features/cart/cartSlice";
-import { useDispatch } from "react-redux";
+import {
+	addToCart,
+	increaseAmount,
+	decreaseAmount,
+} from "../features/cart/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 import { useGetProductByIdQuery } from "../features/api/api";
 
 const Product = () => {
 	const { id } = useParams();
+	const { amount } = useSelector((store) => store.cart);
 	const { data: product, isLoading } = useGetProductByIdQuery(id);
 	const dispatch = useDispatch();
 
 	const handleAddToCart = (product) => {
-		dispatch(addToCart(product))
+		dispatch(addToCart(product));
 	};
 
 	return (
@@ -49,12 +54,22 @@ const Product = () => {
 							<p className="price">${product.price}</p>
 							<p className="description">{product.description}</p>
 							<Buttons>
-								<button className="amount">
+								<button
+									className="amount"
+									// onClick={() => dispatch(decreaseAmount({ id }))}
+								>
 									<Icon icon="bx:minus" />
-									0
+								</button>
+								<p>{amount}</p>
+								<button
+								// onClick={() => dispatch(increaseAmount({ id }))}
+								>
 									<Icon icon="bx:plus" />
 								</button>
-								<button className="cart" onClick={() => handleAddToCart(product)}>
+								<button
+									className="cart"
+									onClick={() => handleAddToCart(product)}
+								>
 									Add to cart
 								</button>
 							</Buttons>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const EmptyCart = styled.main`
-	height: 86vh;
+	min-height: 100vh;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -21,6 +21,7 @@ const EmptyCart = styled.main`
 		border-radius: 5px;
 		font-weight: 200;
 		font-family: "Poppins";
+		cursor: pointer;
 	}
 
 	@media screen and (max-width: 768px) {

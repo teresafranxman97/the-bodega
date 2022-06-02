@@ -61,11 +61,11 @@ const Amount = styled.div`
 	border-radius: 5px;
 	height: 5vh;
 	padding: 5px;
-	align-items: baseline;
+	align-items: center;
 
 	button {
 		padding: 5px 0;
-		height: 0;
+		height: 100%;
 		background: transparent;
 		border: transparent;
 	}
