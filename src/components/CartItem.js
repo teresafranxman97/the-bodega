@@ -23,7 +23,7 @@ const CartItem = ({ id, image, title, price, amount }) => {
 				<div className="info-container">
 					<h4>{title}</h4>
 					<h5>${price}</h5>
-					<button>REMOVE</button>
+					<button onClick={() => dispatch(removeItem(id))} >REMOVE</button>
 				</div>
 			</Content>
 			<Amount className="amount">
