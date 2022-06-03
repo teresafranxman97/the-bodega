@@ -19,6 +19,8 @@ const EmptyCart = styled.main`
 		background: #111111;
 		border: 1px solid #111111;
 		border-radius: 5px;
+		font-size: 16px;
+		letter-spacing: 1px;
 		font-weight: 200;
 		font-family: "Poppins";
 		cursor: pointer;
@@ -48,6 +50,7 @@ const EmptyCart = styled.main`
 const CartStyles = styled.main`
 	padding: 5rem;
 	font-family: "Poppins";
+	min-height: 100vh;
 
 	@media screen and (max-width: 1024px) {
 		padding: 5rem 2rem;
@@ -85,7 +88,7 @@ const ItemContainer = styled.section`
 const Summary = styled.section`
 	width: 38rem;
 	padding: 3rem;
-	height: 65vh;
+	height: 40%;
 	background: #f3f3f3;
 
 	h3 {

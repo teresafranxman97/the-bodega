@@ -8,7 +8,7 @@ const Loading = ({ isLoading }) => {
 				hFlip={true}
 				vFlip={true}
 				style={{ color: "#111111", height: "50vh" }}
-				width={150}
+				width={125}
 			/>
 		</div>
 	);

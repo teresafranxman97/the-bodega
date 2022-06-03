@@ -1,4 +1,5 @@
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
 import {
@@ -9,13 +10,20 @@ import {
 	Summary,
 	ItemContainer,
 } from "../styles/sections/CartStyles"; 
+import { addSubtotal, calculateTotalCost } from "../features/cart/cartSlice";
 
 const Cart = () => {
-	const { cartItems, amount, total, subtotal } = useSelector(
+	const { cartItems, total, subtotal } = useSelector(
 		(store) => store.cart
 	);
+	const dispatch = useDispatch();
 
-	if (amount < 1) {
+	useEffect(() => {
+		dispatch(addSubtotal(cartItems))
+		dispatch(calculateTotalCost(cartItems))
+	}, [dispatch, cartItems])
+
+	if (cartItems < 1) {
 		return (
 			<EmptyCart>
 				<h1>Your shopping cart is empty</h1>
