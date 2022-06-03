@@ -60,7 +60,7 @@ const cartSlice = createSlice({
 			})
 			state.subtotal = subtotal;
 			state.amount = amount;
-			state.total = total;
+			state.total = Math.round(total * 10) / 10;
 		},
 		increaseAmount: (state, { payload }) => {
 			const cartItem = state.cartItems.find((item) => item.id === payload.id);
