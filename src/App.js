@@ -8,13 +8,15 @@ import Product from "./components/Product";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Cart from "./sections/Cart";
-
+import { ToastContainer } from "react-toastify";
 import { AppStyles, GlobalStyle } from "./styles/GlobalStyles";
+
 
 function App() {
 	return (
 		<AppStyles className="App">
 			<Navbar />
+			<ToastContainer />
 
 			<Routes>
 				<Route exact path="/" element={<Landing />} />

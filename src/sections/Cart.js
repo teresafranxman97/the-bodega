@@ -8,7 +8,7 @@ import {
 	Body,
 	Summary,
 	ItemContainer,
-} from "../styles/sections/CartStyles";
+} from "../styles/sections/CartStyles"; 
 
 const Cart = () => {
 	const { cartItems, amount, total, subtotal } = useSelector(

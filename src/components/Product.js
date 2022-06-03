@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
 import { Icon } from "@iconify/react";
+import "react-toastify/dist/ReactToastify.css";
 import {
 	Container,
 	Content,
@@ -8,12 +9,8 @@ import {
 	Buttons,
 	Nav,
 } from "../styles/components/ProductStyles";
-
-import {
-	addToCart,
-	increaseAmount,
-	decreaseAmount,
-} from "../features/cart/cartSlice";
+import { Amount } from "../styles/components/CartItemStyles";
+import { addToCart } from "../features/cart/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useGetProductByIdQuery } from "../features/api/api";
 
@@ -54,18 +51,15 @@ const Product = () => {
 							<p className="price">${product.price}</p>
 							<p className="description">{product.description}</p>
 							<Buttons>
-								<button
-									className="amount"
-									// onClick={() => dispatch(decreaseAmount({ id }))}
-								>
-									<Icon icon="bx:minus" />
-								</button>
-								<p>{amount}</p>
-								<button
-								// onClick={() => dispatch(increaseAmount({ id }))}
-								>
-									<Icon icon="bx:plus" />
-								</button>
+								<Amount className="amount">
+									<button>
+										<Icon icon="ant-design:plus-outlined" />
+									</button>
+									<p>{amount}</p>
+									<button>
+										<Icon icon="ant-design:minus-outlined" />
+									</button>
+								</Amount>
 								<button
 									className="cart"
 									onClick={() => handleAddToCart(product)}
