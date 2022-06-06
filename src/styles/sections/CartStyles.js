@@ -65,6 +65,10 @@ const Header = styled.header`
 		font-weight: 300;
 		font-size: 24px;
 	}
+
+	@media screen and (max-width: 780px) {
+		font-size: 20px;
+	}
 `;
 
 const Body = styled.div`
@@ -90,10 +94,10 @@ const Summary = styled.section`
 	padding: 3rem;
 	height: 40%;
 	background: #f3f3f3;
+	color: #4a4a4a;
 
 	h3 {
-		color: #393939;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 400;
 	}
 
@@ -101,11 +105,11 @@ const Summary = styled.section`
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		color: #393939;
+		color: #4a4a4a;
+		font-size: 14px;
 	}
 
 	h4 {
-		font-size: 18px;
 		font-weight: 300;
 	}
 

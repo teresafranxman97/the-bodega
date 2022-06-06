@@ -30,26 +30,28 @@ const Content = styled.div`
 
 	.info-container {
 		width: 15rem;
+		color: #4a4a4a;
 	}
 
 	h4 {
 		font-weight: 300;
-		color: #393939;
-		font-size: 16px;
 	}
 
 	h5 {
-		font-size: 16px;
-		color: #393939;
 		font-weight: 500;
 	}
 
 	button {
 		border: transparent;
 		background: transparent;
-		font-size: 16px;
 		color: #868686;
 		text-decoration: underline;
+	}
+
+	h4,
+	h5,
+	button {
+		font-size: 14px;
 	}
 `;
 
@@ -71,7 +73,7 @@ const Amount = styled.div`
 	}
 
 	p {
-		font-size: 19px;
+		font-size: 14px;
 		height: 0;
 		display: flex;
 		align-items: center;

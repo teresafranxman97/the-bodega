@@ -33,21 +33,25 @@ const Content = styled.div`
 	}
 
 	h1 {
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: 300;
 	}
 
 	.price {
-		font-size: 18px;
-		font-weight: 600;
+		font-size: 15px;
+		font-weight: 500;
 	}
 
 	.description {
 		font-size: 15px;
 		letter-spacing: 1px;
 		padding: 1rem 0;
-		color: #868686;
 		font-weight: 300;
+	}
+
+	.price,
+	.description {
+		color: #4a4a4a;
 	}
 
 	@media screen and (min-width: 1023px) {
@@ -62,6 +66,13 @@ const Content = styled.div`
 
 	@media screen and (max-width: 1023px) {
 		width: 100%;
+	}
+
+	@media screen and (max-width: 425px) {
+		.price,
+		.description {
+			font-size: 14px;
+		}
 	}
 `;
 
@@ -97,6 +108,12 @@ const Buttons = styled.div`
 		letter-spacing: 1px;
 		font-weight: 200;
 		font-family: poppins;
+	}
+
+	@media screen and (max-width: 320px) {
+		.cart {
+			font-size: 13px;
+		}
 	}
 `;
 
