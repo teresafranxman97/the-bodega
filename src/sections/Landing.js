@@ -1,40 +1,66 @@
+import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
 import LandingStyles from "../styles/sections/LandingStyles";
-import firstImg from "../images/landingimage1.webp";
-import secImg from "../images/menslanding.jpeg";
-import thirdImg from "../images/pexels-photo-4668565.jpeg";
+import firstImg from "../images/landing001.jpeg";
+import manImg from "../images/menslanding.jpeg";
+import womensWear from "../images/womenswear.jpeg";
+import jewelery from "../images/jewelery.jpeg";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 
 const Landing = () => {
-    return (
-			<LandingStyles>
-				<div className="first container">
-					<img src={firstImg} alt="" />
-					<div className="content">
-						<h1>
-							EXPLORE OUR 2022
-							<br /> JEWELERY COLLECTION
-						</h1>
-						<Button content="Shop Now" link="/products" />
+	return (
+		<LandingStyles>
+			<div className="banner-container">
+				<img src={firstImg} alt="" />
+				<div className="banner-content">
+					<h1>
+						EXPLORE <br /> NEW ARRIVALS
+					</h1>
+					<Button content="Shop Now" link="/products" />
+				</div>
+			</div>
+			<div className="wrapper">
+				<div className="content">
+					<div className="img-wrapper">
+						<img src={womensWear} alt="women models" />
+					</div>
+					<div className="text-wrapper">
+						<p>Explore new styles in women’s</p>
+						<Link to="/products">
+							View <Icon icon="ep:arrow-right" />
+						</Link>
 					</div>
 				</div>
-				<div className="second container">
-					<img src={secImg} alt="male model leaning on car" className="img-two" />
-					<div className="content-two">
-						<h1>ALL NEW IN MENS WEAR</h1>
-						<Button content="Shop Now" link="/products" />
+				<div className="content">
+					<div className="img-wrapper">
+						<img
+							src={manImg}
+							alt="male model wearing black beanie and tan jacket"
+						/>
+					</div>
+					<div className="text-wrapper">
+						<p>All new jacket's for men’s</p>
+						<Link to="/products">
+							View <Icon icon="ep:arrow-right" />
+						</Link>
 					</div>
 				</div>
-				<div className="container three">
-					<img src={thirdImg} alt="female model with flower shirt and bag" />
-					<div className="content-three">
-						<h1>SPRING TRENDS FOR WOMEN</h1>
-						<Button content="Shop Now" link="/products" />
+				<div className="content">
+					<div className="img-wrapper">
+						<img src={jewelery} alt="women model wearing jewelery" />
+					</div>
+					<div className="text-wrapper">
+						<p>Explore jewlery collection</p>
+						<Link to="/products">
+							View <Icon icon="ep:arrow-right" />
+						</Link>
 					</div>
 				</div>
-				<Footer />
-			</LandingStyles>
-		);
-}
+			</div>
+			<Footer />
+		</LandingStyles>
+	);
+};
 
 export default Landing;

@@ -1,17 +1,19 @@
 import styled from "styled-components";
 
 const FooterStyles = styled.div`
-	background: #f9f9f9;
+	background: #111111;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
 	padding: 4rem 0;
 	width: 100%;
+	margin-top: 3rem;
 
 	a {
-		color: #111111;
-		font-size: 16px;
-		font-weight: 300;
+		color: white;
+		font-size: 14px;
+		letter-spacing: 2px;
+		font-weight: 100;
 		text-decoration: none;
 	}
 
@@ -22,7 +24,6 @@ const FooterStyles = styled.div`
 		font-family: poppins;
 		display: flex;
 		align-items: baseline;
-		font-size: 12px;
 		padding-left: 1rem;
 		padding-right: 1rem;
 		padding-bottom: 1rem;
@@ -34,9 +35,9 @@ const FooterStyles = styled.div`
 	}
 
 	h5 {
-		color: #111111;
+		color: white;
 		font-size: 16px;
-		font-weight: 500;
+		font-weight: 200;
 		margin: 10px 0;
 		letter-spacing: 1px;
 	}

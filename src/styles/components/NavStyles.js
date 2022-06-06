@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const NavStyles = styled.div`
 	background: ${({ isOpen }) => (isOpen ? "#FFFFFF" : "#ffffff4f")};
-	border-bottom: 1px solid #f1f1f1;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: ${({ isOpen }) => (isOpen ? "column" : "row")};

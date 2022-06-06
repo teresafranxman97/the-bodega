@@ -10,6 +10,8 @@ const Banner = styled.div`
 	img {
 		height: 100%;
 		width: 100%;
+		object-fit: cover;
+		object-position: bottom;
 	}
 
 	h1 {
@@ -97,7 +99,7 @@ const Container = styled.div`
 	}
 
 	@media screen and (min-width: 1024px) {
-		padding: 10rem;
+		padding: 3rem 10rem;
 
 		.top-content,
 		.center-content,
@@ -153,7 +155,7 @@ const Content = styled.div`
 	}
 
 	@media screen and (min-width: 1024px) {
-		padding: 10rem;
+		padding: 3rem 10rem;
 	}
 `;
 

@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 const ButtonStyles = styled.div`
 	cursor: pointer;
+	font-family: poppins;
 	background: #111111;
-	width: 15rem;
+	width: 19rem;
 	padding: 15px 30px;
 	text-align: center;
 	border-radius: 5px;
