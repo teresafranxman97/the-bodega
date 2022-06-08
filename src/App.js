@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Landing from "./sections/Landing";
 import Products from "./sections/Products";
-import Signup from "./sections/Signup";
-import Login from "./sections/Login";
+import Signup from "./sections/signup/Signup";
+import Login from "./sections/login/Login";
 import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import About from "./sections/About";
@@ -13,10 +13,7 @@ import { app } from "./firebaseConfig";
 import { ToastContainer } from "react-toastify";
 import { AppStyles, GlobalStyle } from "./styles/GlobalStyles";
 
-
 function App() {
-	// console.log(app)
-
 	return (
 		<AppStyles className="App">
 			<Navbar />
@@ -29,8 +26,8 @@ function App() {
 				<Route path="products/:id" element={<Product />} />
 				<Route path="signup" element={<Signup />} />
 				<Route path="about" element={<About />} />
-				<Route path="contact" element={<Contact/>} />
-				<Route path="cart" element={<Cart/>} />
+				<Route path="contact" element={<Contact />} />
+				<Route path="cart" element={<Cart />} />
 			</Routes>
 			<GlobalStyle />
 		</AppStyles>

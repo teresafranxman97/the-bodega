@@ -1,11 +1,13 @@
 import React from "react";
+import { useFormik } from "formik";
+import signupSchema from "../../schema/signupSchema";
+import { FirebaseSignup } from "./FirebaseSignup";
+
 import {
 	SignupStyles,
 	Container,
 	Buttons,
-} from "../styles/sections/SignupStyles";
-import { useFormik } from "formik";
-import signupSchema from "../schema/signupSchema";
+} from "../../styles/sections/SignupStyles";
 
 const Signup = () => {
 	const formik = useFormik({
@@ -15,7 +17,7 @@ const Signup = () => {
 		},
 		validationSchema: signupSchema,
 		onSubmit: (values) => {
-			console.log(values);
+			FirebaseSignup(values)
 		},
 	});
 

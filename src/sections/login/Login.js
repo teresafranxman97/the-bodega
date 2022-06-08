@@ -1,12 +1,14 @@
 import { useFormik } from "formik";
 import React from "react";
 import { Link } from "react-router-dom";
-import loginSchema from "../schema/loginSchema";
+import loginSchema from "../../schema/loginSchema";
+import { FirebaseLogin } from "./FirebaseLogin";
+
 import {
 	LoginStyles,
 	Container,
 	Buttons,
-} from "../styles/sections/LoginStyles";
+} from "../../styles/sections/LoginStyles";
 
 const Login = () => {
 	const formik = useFormik({
@@ -16,7 +18,7 @@ const Login = () => {
 		},
 		validationSchema: loginSchema,
 		onSubmit: (values) => {
-			console.log(values);
+			FirebaseLogin(values)
 		},
 	});
 
