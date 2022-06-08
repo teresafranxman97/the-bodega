@@ -1,32 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import {
 	SignupStyles,
 	Container,
 	Buttons,
 } from "../styles/sections/SignupStyles";
-
-const defaultValues = {
-	firstName: "",
-	lastName: "",
-	email: "",
-	password: "",
-	checkbox: false,
-};
+import { useFormik } from "formik";
+import signupSchema from "../schema/signupSchema";
 
 const Signup = () => {
-	const [ values, setValues ] =useState(defaultValues);
-
-	const handleChange = (e) => {
-		setValues({
-			...values,
-			[e.target.name]: e.target.value,
-		});
-	};
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		console.log("clicked");
-	};
+	const formik = useFormik({
+		initialValues: {
+			firstName: "",
+			lastName: "",
+			email: "",
+			password: "",
+		},
+		validationSchema: signupSchema,
+		onSubmit: (values) => {
+			console.log(values);
+		},
+	});
 
 	return (
 		<SignupStyles>
@@ -34,29 +27,65 @@ const Signup = () => {
 				<h1>CREATE ACCOUNT</h1>
 			</div>
 			<Container>
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={formik.handleSubmit}>
 					<label className="label-wrapper">
 						First Name
-						<input type="text" name="firstName" onChange={handleChange} />
+						<input
+							type="text"
+							name="firstName"
+							onChange={formik.handleChange}
+							value={formik.values.firstName}
+						/>
 					</label>
+					{formik.errors && formik.errors.firstName ? (
+						<div style={{ color: "red", fontSize: "14px" }}>
+							{formik.errors.firstName}
+						</div>
+					) : null}
 					<label className="label-wrapper">
 						Last Name
-						<input type="text" name="lastName" onChange={handleChange} />
+						<input
+							type="text"
+							name="lastName"
+							onChange={formik.handleChange}
+							value={formik.values.lastName}
+						/>
 					</label>
+					{formik.errors && formik.errors.lastName ? (
+						<div style={{ color: "red", fontSize: "14px" }}>
+							{formik.errors.lastName}
+						</div>
+					) : null}
 					<label className="label-wrapper">
 						E-Mail
-						<input type="email" name="email" onChange={handleChange} />
+						<input
+							type="email"
+							name="email"
+							onChange={formik.handleChange}
+							value={formik.values.email}
+						/>
 					</label>
+					{formik.errors && formik.errors.email ? (
+						<div style={{ color: "red", fontSize: "14px" }}>
+							{formik.errors.email}
+						</div>
+					) : null}
 					<label className="label-wrapper">
 						Password
 						<input
 							type="password"
 							name="password"
-							onChange={handleChange}
+							onChange={formik.handleChange}
+							value={formik.values.password}
 						/>
 					</label>
+					{formik.errors && formik.errors.password ? (
+						<div style={{ color: "red", fontSize: "14px" }}>
+							{formik.errors.password}
+						</div>
+					) : null}
 					<div className="checkbox">
-						<input type="checkbox" name="checkbox" onChange={handleChange} />
+						<input type="checkbox" name="checkbox" />
 						<label>
 							I agree to <span>Terms & Conditions</span> and
 							<span> Privacy Policy</span>
