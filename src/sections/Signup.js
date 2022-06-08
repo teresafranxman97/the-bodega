@@ -10,8 +10,6 @@ import signupSchema from "../schema/signupSchema";
 const Signup = () => {
 	const formik = useFormik({
 		initialValues: {
-			firstName: "",
-			lastName: "",
 			email: "",
 			password: "",
 		},
@@ -28,34 +26,6 @@ const Signup = () => {
 			</div>
 			<Container>
 				<form onSubmit={formik.handleSubmit}>
-					<label className="label-wrapper">
-						First Name
-						<input
-							type="text"
-							name="firstName"
-							onChange={formik.handleChange}
-							value={formik.values.firstName}
-						/>
-					</label>
-					{formik.errors && formik.errors.firstName ? (
-						<div style={{ color: "red", fontSize: "14px" }}>
-							{formik.errors.firstName}
-						</div>
-					) : null}
-					<label className="label-wrapper">
-						Last Name
-						<input
-							type="text"
-							name="lastName"
-							onChange={formik.handleChange}
-							value={formik.values.lastName}
-						/>
-					</label>
-					{formik.errors && formik.errors.lastName ? (
-						<div style={{ color: "red", fontSize: "14px" }}>
-							{formik.errors.lastName}
-						</div>
-					) : null}
 					<label className="label-wrapper">
 						E-Mail
 						<input

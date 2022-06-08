@@ -9,7 +9,7 @@ const SignupStyles = styled.main`
 	gap: 0.5rem;
 
 	.title {
-		width: 40%;
+		width: 40rem;
 
 		h1 {
 			text-align: left;
@@ -32,7 +32,7 @@ const SignupStyles = styled.main`
 `;
 
 const Container = styled.div`
-	width: 40%;
+	width: 40rem;
 
 	form {
 		display: flex;
