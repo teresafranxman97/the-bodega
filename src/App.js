@@ -8,11 +8,15 @@ import Product from "./components/Product";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Cart from "./sections/Cart";
+import { app } from "./firebaseConfig";
+
 import { ToastContainer } from "react-toastify";
 import { AppStyles, GlobalStyle } from "./styles/GlobalStyles";
 
 
 function App() {
+	// console.log(app)
+
 	return (
 		<AppStyles className="App">
 			<Navbar />
