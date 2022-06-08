@@ -10,8 +10,8 @@ const defaultValues = {
 	lastName: "",
 	email: "",
 	password: "",
-	checkbox: false
-}
+	checkbox: false,
+};
 
 const Signup = () => {
 	const [ values, setValues ] =useState(defaultValues);
@@ -49,7 +49,11 @@ const Signup = () => {
 					</label>
 					<label className="label-wrapper">
 						Password
-						<input type="password" name="password" onChange={handleChange} />
+						<input
+							type="password"
+							name="password"
+							onChange={handleChange}
+						/>
 					</label>
 					<div className="checkbox">
 						<input type="checkbox" name="checkbox" onChange={handleChange} />
@@ -58,7 +62,7 @@ const Signup = () => {
 							<span> Privacy Policy</span>
 						</label>
 					</div>
-					<input type="submit" value="Create account"/>
+					<input type="submit" value="Create account" />
 					<Buttons>
 						<p>
 							Already have an account? <a href="/login">Sign in</a>

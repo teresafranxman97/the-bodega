@@ -94,7 +94,7 @@ const LandingStyles = styled.div`
 
 		.content {
 			height: 95vh;
-			justify-content: flex-start;
+			justify-content: center;
 		}
 
 		.text-wrapper {

@@ -1,31 +1,24 @@
-import React, { useState } from "react";
+import { useFormik } from "formik";
+import React from "react";
 import { Link } from "react-router-dom";
+import loginSchema from "../schema/loginSchema";
 import {
 	LoginStyles,
 	Container,
 	Buttons,
 } from "../styles/sections/LoginStyles";
 
-const defaultValues = {
-	email: "",
-	password: "",
-	checkbox: false
-};
-
 const Login = () => {
-	const [values, setValues] = useState(defaultValues);
-
-	const handleChange = (e) => {
-		setValues({
-			...values,
-			[e.target.name]: e.target.value
-		})
-	}
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		console.log('clicked')
-	}
+	const formik = useFormik({
+		initialValues: {
+			email: "",
+			password: "",
+		},
+		validationSchema: loginSchema,
+		onSubmit: (values) => {
+			console.log(values);
+		},
+	});
 
 	return (
 		<LoginStyles>
@@ -33,25 +26,45 @@ const Login = () => {
 				<h1>LOG IN</h1>
 			</div>
 			<Container>
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={formik.handleSubmit}>
 					<label className="label-wrapper">
 						E-Mail
-						<input type="email" name="email" onChange={handleChange} />
+						<input
+							type="email"
+							name="email"
+							onChange={formik.handleChange}
+							value={formik.values.email}
+						/>
 					</label>
+					{formik.touched.email && formik.errors.email ? (
+						<div style={{ color: "red", fontSize: "14px" }}>
+							{formik.errors.email}
+						</div>
+					) : null}
 					<label className="label-wrapper">
 						Password
-						<input type="password" name="password" onChange={handleChange} />
+						<input
+							type="password"
+							name="userPassword"
+							onChange={formik.handleChange}
+							value={formik.values.password}
+						/>
 					</label>
+					{formik.touched.password && formik.errors.password ? (
+						<div style={{ color: "red", fontSize: "14px" }}>
+							{formik.errors.password}
+						</div>
+					) : null}
 					<div className="form-content">
 						<div className="checkbox">
-							<input type="checkbox" name="checkbox" onChange={handleChange} />
+							<input type="checkbox" name="checkbox" />
 							<label>Remember me</label>
 						</div>
 						<div className="link">
 							<Link to="/">Forgot password?</Link>
 						</div>
 					</div>
-					<input type="submit" value="Sign in"/>
+					<input type="submit" value="Sign in" />
 					<Buttons>
 						<p>
 							Don't have an account? <a href="signup">Sign up</a>
