@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import loginSchema from "../../schema/loginSchema";
 import { FirebaseLogin } from "./FirebaseLogin";
@@ -11,6 +11,8 @@ import {
 } from "../../styles/sections/LoginStyles";
 
 const Login = () => {
+	const [ isLoggedIn, setIsLoggedIn ] = useState(false);
+
 	const formik = useFormik({
 		initialValues: {
 			email: "",

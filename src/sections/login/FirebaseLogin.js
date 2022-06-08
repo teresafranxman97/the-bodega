@@ -11,3 +11,5 @@ export const FirebaseLogin = ({ email, password }) => {
 			console.log(error)
 		});
 };
+
+// https://the-bodega-d712f.firebaseapp.com/__/auth/handler

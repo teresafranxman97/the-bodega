@@ -8,6 +8,9 @@ import Product from "./components/Product";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Cart from "./sections/Cart";
+import Dashboard from "./sections/Dashboard";
+import ErrorPage from "./sections/ErrorPage";
+
 import { app } from "./firebaseConfig";
 
 import { ToastContainer } from "react-toastify";
@@ -28,6 +31,8 @@ function App() {
 				<Route path="about" element={<About />} />
 				<Route path="contact" element={<Contact />} />
 				<Route path="cart" element={<Cart />} />
+				<Route path="dashboard" element={<Dashboard />} />
+				<Route path="*" element={<ErrorPage />} />
 			</Routes>
 			<GlobalStyle />
 		</AppStyles>
