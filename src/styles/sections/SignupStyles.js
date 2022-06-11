@@ -107,6 +107,27 @@ const Buttons = styled.div`
 			color: #111111;
 		}
 	}
+
+	button {
+		width: 247px;
+		padding: 5px;
+		height: 40px;
+		font-size: 15px;
+		margin: 1rem 0;
+		font-weight: 500;
+		border: 1px solid #dddddd;
+		background: transparent;
+		border-radius: 5px;
+		font-family: "Poppins";
+		color: #818181;
+		display: flex;
+		align-items: center;
+	}
+
+	img {
+		height: 100%;
+		margin-right: 8px;
+	}
 `;
 
 export { SignupStyles, Container, Buttons };

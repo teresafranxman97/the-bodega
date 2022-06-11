@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import Navbar from "../styles/sections/DashboardStyles";
 
-const Dashboard = () => {
+const Dashboard = ({ email }) => {
 	return (
 		<main>
 			<Navbar>

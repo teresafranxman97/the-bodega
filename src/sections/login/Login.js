@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import loginSchema from "../../schema/loginSchema";
 import { FirebaseLogin } from "./FirebaseLogin";
+import { signInWithPopup } from "firebase/auth";
+import { auth, google, facebook } from "../../firebaseConfig";
+import googleSvg from "../../images/googlesvg.svg";
+import facebookSvg from "../../images/facebooksvg.svg";
 
 import {
 	LoginStyles,
@@ -11,7 +15,7 @@ import {
 } from "../../styles/sections/LoginStyles";
 
 const Login = () => {
-	const [ isLoggedIn, setIsLoggedIn ] = useState(false);
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 	const formik = useFormik({
 		initialValues: {
@@ -20,9 +24,15 @@ const Login = () => {
 		},
 		validationSchema: loginSchema,
 		onSubmit: (values) => {
-			FirebaseLogin(values)
+			FirebaseLogin(values);
 		},
 	});
+
+	const login = async (provider) => {
+		const result = await signInWithPopup(auth, provider);
+		setIsLoggedIn(true);
+		console.log(result);
+	};
 
 	return (
 		<LoginStyles>
@@ -76,8 +86,14 @@ const Login = () => {
 						<p>
 							<span>Or</span>
 						</p>
-						<button>continue with google</button>
-						<button>continue with facebook</button>
+						<button onClick={() => login(google)}>
+							<img src={googleSvg} alt="google logo" />
+							Continue with Google
+						</button>
+						<button onClick={() => login(facebook)}>
+							<img src={facebookSvg} alt="facebook logo" />
+							Continue with Facebook
+						</button>
 					</Buttons>
 				</form>
 			</Container>

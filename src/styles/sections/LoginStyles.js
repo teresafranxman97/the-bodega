@@ -9,7 +9,7 @@ const LoginStyles = styled.main`
 	align-items: center;
 
 	.title {
-		width: 40%;
+		width: 40rem;
 
 		h1 {
 			text-align: left;
@@ -38,7 +38,7 @@ const LoginStyles = styled.main`
 `;
 
 const Container = styled.div`
-	width: 40%;
+	width: 40rem;
 
 	form {
 		display: flex;
@@ -128,6 +128,27 @@ const Buttons = styled.div`
 		a {
 			font-weight: 600;
 		}
+	}
+
+	button {
+		width: 247px;
+		padding: 5px;
+		height: 40px;
+		font-size: 15px;
+		margin: 1rem 0;
+		font-weight: 500;
+		border: 1px solid #818181;
+		background: transparent;
+		border-radius: 3px;
+		font-family: "Poppins";
+		color: #818181;
+		display: flex;
+		align-items: center;
+	}
+
+	img {
+		height: 100%;
+		margin-right: 8px;
 	}
 `;
 

@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import signupSchema from "../../schema/signupSchema";
 import { FirebaseSignup } from "./FirebaseSignup";
+import { signInWithPopup } from "firebase/auth";
+import { auth, google, facebook } from "../../firebaseConfig";
 
 import {
 	SignupStyles,
 	Container,
 	Buttons,
 } from "../../styles/sections/SignupStyles";
+import googleSvg from "../../images/googlesvg.svg";
+import facebookSvg from "../../images/facebooksvg.svg";
 
 const Signup = () => {
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 	const formik = useFormik({
 		initialValues: {
 			email: "",
@@ -17,9 +23,15 @@ const Signup = () => {
 		},
 		validationSchema: signupSchema,
 		onSubmit: (values) => {
-			FirebaseSignup(values)
+			FirebaseSignup(values);
 		},
 	});
+
+	const login = async (provider) => {
+		const result = await signInWithPopup(auth, provider);
+		setIsLoggedIn(true);
+		console.log(result);
+	};
 
 	return (
 		<SignupStyles>
@@ -69,8 +81,14 @@ const Signup = () => {
 							Already have an account? <a href="/login">Sign in</a>
 						</p>
 						<p>Or</p>
-						<button>continue with google</button>
-						<button>continue with facebook</button>
+						<button onClick={() => login(google)}>
+							<img src={googleSvg} alt="google logo" />
+							Continue with Google
+						</button>
+						<button onClick={() => login(facebook)}>
+							<img src={facebookSvg} alt="facebook logo" />
+							Continue with Facebook
+						</button>
 					</Buttons>
 				</form>
 			</Container>
