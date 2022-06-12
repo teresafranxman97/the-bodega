@@ -10,6 +10,7 @@ const LoginStyles = styled.main`
 
 	.title {
 		width: 40rem;
+		margin: 1rem 0;
 
 		h1 {
 			text-align: left;
