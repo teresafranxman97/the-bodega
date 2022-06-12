@@ -62,11 +62,7 @@ const CartStyles = styled.main`
 `;
 const Header = styled.header`
 	h1 {
-		font-weight: 300;
-		font-size: 24px;
-	}
-
-	@media screen and (max-width: 780px) {
+		font-weight: 200;
 		font-size: 20px;
 	}
 `;
@@ -75,6 +71,7 @@ const Body = styled.div`
 	display: flex;
 	justify-content: space-between;
 	gap: 1rem;
+	margin-bottom: 9vh;
 
 	@media screen and (max-width: 780px) {
 		flex-direction: column;

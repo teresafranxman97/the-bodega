@@ -70,7 +70,7 @@ const Signup = () => {
 					) : null}
 					<div className="checkbox">
 						<input type="checkbox" name="checkbox" />
-						<label>
+						<label className="checkbox-label" >
 							I agree to <span>Terms & Conditions</span> and
 							<span> Privacy Policy</span>
 						</label>

@@ -11,7 +11,8 @@ const ProductsStyles = styled.div`
 
 		h1 {
 			font-family: "Poppins";
-			font-weight: 400;
+			font-weight: 200;
+			font-size: 24px;
 			border-bottom: 1px solid #f1f1f1;
 		}
 	}

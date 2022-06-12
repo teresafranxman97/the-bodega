@@ -14,8 +14,8 @@ const ContactStyles = styled.main`
 
 	h1 {
 		text-align: left;
-		font-weight: 400;
-		font-size: 20px;
+		font-weight: 200;
+		font-size: 24px;
 	}
 
 	form {

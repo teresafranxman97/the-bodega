@@ -13,7 +13,7 @@ const LoginStyles = styled.main`
 
 		h1 {
 			text-align: left;
-			font-weight: 500;
+			font-weight: 200;
 			font-size: 24px;
 		}
 	}
@@ -137,9 +137,9 @@ const Buttons = styled.div`
 		font-size: 15px;
 		margin: 1rem 0;
 		font-weight: 500;
-		border: 1px solid #818181;
+		border: 1px solid #DDDDDD;
 		background: transparent;
-		border-radius: 3px;
+		border-radius: 5px;
 		font-family: "Poppins";
 		color: #818181;
 		display: flex;

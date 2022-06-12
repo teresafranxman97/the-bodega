@@ -24,6 +24,7 @@ const Container = styled.div`
 
 const Content = styled.div`
 	width: 50rem;
+	color: #4a4a4a;
 
 	img {
 		width: 100%;
@@ -38,12 +39,12 @@ const Content = styled.div`
 	}
 
 	.price {
-		font-size: 15px;
+		font-size: 14px;
 		font-weight: 500;
 	}
 
 	.description {
-		font-size: 15px;
+		font-size: 14px;
 		letter-spacing: 1px;
 		padding: 1rem 0;
 		font-weight: 300;
@@ -71,7 +72,7 @@ const Content = styled.div`
 	@media screen and (max-width: 425px) {
 		.price,
 		.description {
-			font-size: 14px;
+			font-size: 12px;
 		}
 	}
 `;

@@ -13,7 +13,7 @@ const SignupStyles = styled.main`
 
 		h1 {
 			text-align: left;
-			font-weight: 500;
+			font-weight: 200;
 			font-size: 24px;
 		}
 	}
@@ -57,6 +57,7 @@ const Container = styled.div`
 	}
 
 	input[type="submit"] {
+		font-family: "Poppins";
 		padding: 15px;
 		background: #111111;
 		color: white;
@@ -71,8 +72,7 @@ const Container = styled.div`
 		color: #868686;
 	}
 
-	.checkbox,
-	label {
+	.checkbox-label {
 		color: #111111;
 	}
 

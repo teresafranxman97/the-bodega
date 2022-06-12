@@ -91,20 +91,16 @@ const Container = styled.div`
 		font-weight: 400;
 	}
 
-	p {
+	.content-wrapper p {
 		font-size: 14px;
 		color: #393939;
 		letter-spacing: 1px;
 		font-weight: 400;
 	}
 
-	@media screen and (min-width: 1024px) {
-		padding: 3rem 10rem;
-
-		.top-content,
-		.center-content,
-		.last-content {
-			height: 50vh;
+	@media screen and (max-width: 425px) {
+		.content-wrapper p {
+			font-size: 12px;
 		}
 	}
 
@@ -122,6 +118,16 @@ const Container = styled.div`
 
 		h3 {
 			width: 100%;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		padding: 3rem 10rem;
+
+		.top-content,
+		.center-content,
+		.last-content {
+			height: 50vh;
 		}
 	}
 `;

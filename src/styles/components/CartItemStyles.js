@@ -53,6 +53,14 @@ const Content = styled.div`
 	button {
 		font-size: 14px;
 	}
+
+	@media screen and (max-width: 320px) {
+		h4,
+		h5,
+		button {
+			font-size: 12px;
+		}
+	}
 `;
 
 const Amount = styled.div`
