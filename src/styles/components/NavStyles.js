@@ -6,7 +6,7 @@ const NavStyles = styled.div`
 	justify-content: space-between;
 	flex-direction: ${({ isOpen }) => (isOpen ? "column" : "row")};
 	padding-top: 0.85rem;
-	align-items: end;
+	align-items: center;
 	position: ${({ isOpen }) => (isOpen ? "unset" : "relative")};
 	top: 0;
 	left: 0;

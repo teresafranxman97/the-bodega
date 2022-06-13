@@ -14,10 +14,10 @@ const Footer = () => {
 			</div>
 			<div className="links right">
 				<h5>Company</h5>
-				<Link to="/products">About Us</Link>
-				<Link to="/products">Contact</Link>
-				<Link to="/products">Login</Link>
-				<Link to="/products">Signup</Link>
+				<Link to="/about">About Us</Link>
+				<Link to="/contact">Contact</Link>
+				<Link to="/login">Login</Link>
+				<Link to="/signup">Signup</Link>
 			</div>
 			<div className="links left">
 				<h5>Follow Us</h5>

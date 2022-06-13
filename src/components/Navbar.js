@@ -22,13 +22,13 @@ const Navbar = () => {
 						<Icon
 							style={{ color: "#4A4A4A", position: "absolute", right: "1rem" }}
 							icon="ep:close-bold"
-							width={28}
+							width={25}
 						/>
 					) : (
 						<Icon
 							style={{ color: "#111111" }}
 							icon="system-uicons:menu-hamburger"
-							width={28}
+							width={25}
 						/>
 					)}
 				</Hamburger>
@@ -56,10 +56,10 @@ const Navbar = () => {
 				</Menu>
 				<Icons isOpen={isOpen}>
 					<Link to="login">
-						<Icon icon="bxs:user" width={22} />
+						<Icon icon="bxs:user" width={20} />
 					</Link>
 					<Link to="cart">
-						<Icon icon="akar-icons:shopping-bag" width={22} />
+						<Icon icon="akar-icons:shopping-bag" width={20} />
 					</Link>
 				</Icons>
 			</NavStyles>
