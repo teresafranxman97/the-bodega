@@ -47,18 +47,22 @@ const Container = styled.div`
 		margin-bottom: 0.5rem;
 	}
 
-	input[type="text"],
 	input[type="email"],
 	input[type="password"] {
 		padding: 15px;
-		font-family: "Poppins";
 		font-size: 16px;
 		border: 1px solid #dddddd;
 		border-radius: 5px;
 	}
 
+	input[type="email"],
+	input[type="password"],
 	input[type="submit"] {
-		padding: 15px;
+		font-family: poppins;
+	}
+
+	input[type="submit"] {
+		height: 50px;
 		background: #111111;
 		color: white;
 		border: 1px solid #111111;
@@ -66,6 +70,7 @@ const Container = styled.div`
 		font-size: 16px;
 		cursor: pointer;
 		width: 100%;
+		font-weight: 200;
 	}
 
 	label {
