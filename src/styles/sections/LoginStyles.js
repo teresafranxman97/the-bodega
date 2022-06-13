@@ -78,7 +78,7 @@ const Container = styled.div`
 		align-items: center;
 
 		label {
-			color: #111111;
+			color: #4a4a4a;
 		}
 	}
 
@@ -131,7 +131,7 @@ const Buttons = styled.div`
 	align-items: center;
 
 	p {
-		color: #111111;
+		color: #4a4a4a;
 
 		a {
 			font-weight: 600;

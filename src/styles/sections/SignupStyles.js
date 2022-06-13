@@ -79,11 +79,12 @@ const Container = styled.div`
 	}
 
 	.checkbox-label {
-		color: #111111;
+		color: #4a4a4a;
 	}
 
 	span {
 		font-weight: 600;
+		color: #111111;
 	}
 
 	media screen and (max-width: 1024px) {
@@ -105,7 +106,7 @@ const Buttons = styled.div`
 	align-items: center;
 
 	p {
-		color: #111111;
+		color: #4a4a4a;
 
 		a {
 			font-weight: 600;
