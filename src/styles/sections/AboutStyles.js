@@ -6,6 +6,7 @@ const AboutStyles = styled.main`
 
 const Banner = styled.div`
 	height: 33vh;
+	position: relative;
 
 	img {
 		height: 100%;
@@ -22,7 +23,7 @@ const Banner = styled.div`
 		text-align: center;
 		letter-spacing: 5px;
 		font-size: 15px;
-		top: 35vh;
+		top: 23vh;
 	}
 
 	@media screen and (min-width: 425px) {
