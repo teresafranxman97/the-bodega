@@ -15,6 +15,10 @@ import {
 const Navbar = () => {
     const [ isOpen, setIsOpen ] = useState(false);
 
+	const closeMenu = () => {
+		setIsOpen(!isOpen)
+	};
+
     return (
 			<NavStyles isOpen={isOpen}>
 				<Hamburger onClick={() => setIsOpen(!isOpen)}>
@@ -44,13 +48,13 @@ const Navbar = () => {
 					)}
 				</Logo>
 				<Menu isOpen={isOpen}>
-					<MenuLink isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
+					<MenuLink onClick={() => closeMenu}>
 						<Link to="products">Products</Link>
 					</MenuLink>
-					<MenuLink isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
+					<MenuLink onClick={() =>closeMenu}>
 						<Link to="about">About</Link>
 					</MenuLink>
-					<MenuLink onClick={() => setIsOpen(!isOpen)}>
+					<MenuLink onClick={() => closeMenu}>
 						<Link to="contact">Contact</Link>
 					</MenuLink>
 				</Menu>

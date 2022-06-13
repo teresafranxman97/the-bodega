@@ -53,8 +53,6 @@ const MenuLink = styled.div`
 	cursor: pointer;
 	text-align: center;
 	font-weight: 400;
-	border-bottom: ${({ isOpen }) => (isOpen ? "1px solid #EEEEEE" : "none")};
-	transition: all 0.3s ease-in;
 `;
 
 const Icons = styled.div`

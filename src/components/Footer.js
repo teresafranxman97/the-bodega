@@ -25,9 +25,9 @@ const Footer = () => {
 					<Icon
 						icon="akar-icons:twitter-fill"
 						style={{ color: "white", marginRight: "1rem" }}
-						width={20}
+						width={18}
 					/>
-					<Icon icon="cib:facebook-f" style={{ color: "white" }} width={20} />
+					<Icon icon="cib:facebook-f" style={{ color: "white" }} width={18} />
 				</div>
 			</div>
 		</FooterStyles>

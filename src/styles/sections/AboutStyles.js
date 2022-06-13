@@ -23,14 +23,14 @@ const Banner = styled.div`
 		text-align: center;
 		letter-spacing: 5px;
 		font-size: 15px;
-		top: 23vh;
+		top: 22vh;
 	}
 
 	@media screen and (min-width: 425px) {
 		height: 45vh;
 
 		h1 {
-			top: 44vh;
+			top: 33vh;
 			font-size: 17px;
 		}
 	}
@@ -39,7 +39,7 @@ const Banner = styled.div`
 		height: 57vh;
 
 		h1 {
-			top: 54vh;
+			top: 44vh;
 			font-size: 21px;
 		}
 	}
@@ -48,7 +48,7 @@ const Banner = styled.div`
 		height: 70vh;
 
 		h1 {
-			top: 60vh;
+			top: 53vh;
 			font-size: 28px;
 		}
 	}
