@@ -22,7 +22,7 @@ const Banner = styled.div`
 		text-align: center;
 		letter-spacing: 5px;
 		font-size: 15px;
-		top: 30vh;
+		top: 35vh;
 	}
 
 	@media screen and (min-width: 425px) {
