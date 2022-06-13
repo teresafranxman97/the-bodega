@@ -41,7 +41,7 @@ const Menu = styled.div`
 		display: ${({ isOpen }) => (isOpen ? "" : "none")};
 		overflow: hidden;
 		flex-direction: column;
-		max-height: ${({ isOpen }) => (isOpen ? "400px" : "0")};
+		max-height: ${({ isOpen }) => (isOpen ? "400px" : "")};
 		width: ${({ isOpen }) => (isOpen ? "100vw" : "")};
 		transition: ${({ isOpen }) =>
 			isOpen ? "max-height 0.3s ease-in" : "0s ease-out"};
@@ -49,16 +49,17 @@ const Menu = styled.div`
 `;
 
 const MenuLink = styled.div`
-	padding: 1rem;
+	padding: 1.5rem;
 	cursor: pointer;
 	text-align: center;
 	font-weight: 400;
+	border-bottom: ${({ isOpen }) => (isOpen ? "1px solid #EEEEEE" : "none")};
 	transition: all 0.3s ease-in;
 `;
 
 const Icons = styled.div`
 	gap: 1rem;
-	display: flex;
+	display: ${({ isOpen }) => (isOpen ? "none" : "flex")};
 	justify-content: center;
 `;
 
