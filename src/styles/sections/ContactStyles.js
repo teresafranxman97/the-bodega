@@ -50,7 +50,7 @@ const ContactStyles = styled.main`
 	}
 
 	input[type="submit"] {
-		padding: 15px;
+		height: 50px;
 		background: #111111;
 		color: white;
 		border: 1px solid #111111;
