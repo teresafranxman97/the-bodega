@@ -58,7 +58,6 @@ const Container = styled.div`
 	}
 
 	input[type="submit"] {
-		font-family: "Poppins";
 		padding: 15px;
 		background: #111111;
 		color: white;
@@ -66,6 +65,7 @@ const Container = styled.div`
 		border-radius: 5px;
 		font-size: 16px;
 		cursor: pointer;
+		width: 100%;
 	}
 
 	label {

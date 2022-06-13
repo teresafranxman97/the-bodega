@@ -2,6 +2,11 @@ import { useParams } from "react-router-dom";
 import Loading from "./Loading";
 import { Icon } from "@iconify/react";
 import "react-toastify/dist/ReactToastify.css";
+import { Amount } from "../styles/components/CartItemStyles";
+import { addToCart } from "../features/cart/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useGetProductByIdQuery } from "../features/api/api";
+
 import {
 	Container,
 	Content,
@@ -9,10 +14,6 @@ import {
 	Buttons,
 	Nav,
 } from "../styles/components/ProductStyles";
-import { Amount } from "../styles/components/CartItemStyles";
-import { addToCart } from "../features/cart/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { useGetProductByIdQuery } from "../features/api/api";
 
 const Product = () => {
 	const { id } = useParams();
@@ -53,11 +54,17 @@ const Product = () => {
 							<Buttons>
 								<Amount className="amount">
 									<button>
-										<Icon icon="ant-design:plus-outlined" />
+										<Icon
+											icon="ant-design:plus-outlined"
+											style={{ color: "#111111" }}
+										/>
 									</button>
 									<p>{amount}</p>
 									<button>
-										<Icon icon="ant-design:minus-outlined" />
+										<Icon
+											icon="ant-design:minus-outlined"
+											style={{ color: "#111111" }}
+										/>
 									</button>
 								</Amount>
 								<button

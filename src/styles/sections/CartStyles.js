@@ -53,7 +53,7 @@ const CartStyles = styled.main`
 	min-height: 100vh;
 
 	@media screen and (max-width: 1024px) {
-		padding: 5rem 2rem;
+		padding: 3rem 2rem;
 	}
 
 	@media screen and (max-width: 425px) {

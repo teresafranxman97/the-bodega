@@ -56,8 +56,8 @@ const Content = styled.div`
 	}
 
 	@media screen and (min-width: 1023px) {
-		h1 {
-			font-size: 20px;
+		h1, .price, .description {
+			font-size: 16px;
 		}
 	}
 
@@ -89,13 +89,21 @@ const Buttons = styled.div`
 	.amount {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 1rem;
 		background: transparent;
 		font-size: 15px;
 		border-radius: 4px;
 		border: 1px solid #111111;
-		padding: 10px;
 		color: #111111;
+		height: 100%;
+		padding: 10px 20px;
+
+		button {
+			height: 100%;
+			background: transparent;
+			border: transparent;
+		}
 	}
 
 	.cart {

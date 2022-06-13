@@ -21,8 +21,8 @@ const Banner = styled.div`
 		width: 100%;
 		text-align: center;
 		letter-spacing: 5px;
-		font-size: 17px;
-		top: 33vh;
+		font-size: 15px;
+		top: 30vh;
 	}
 
 	@media screen and (min-width: 425px) {
@@ -30,7 +30,7 @@ const Banner = styled.div`
 
 		h1 {
 			top: 44vh;
-			font-size: 19px;
+			font-size: 17px;
 		}
 	}
 

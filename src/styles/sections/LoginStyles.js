@@ -96,6 +96,7 @@ const Container = styled.div`
 		border-radius: 5px;
 		font-size: 16px;
 		cursor: pointer;
+		width: 100%;
 	}
 
 	@media screen and (max-width: 1024px) {
@@ -138,7 +139,7 @@ const Buttons = styled.div`
 		font-size: 15px;
 		margin: 1rem 0;
 		font-weight: 500;
-		border: 1px solid #DDDDDD;
+		border: 1px solid #dddddd;
 		background: transparent;
 		border-radius: 5px;
 		font-family: "Poppins";

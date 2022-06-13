@@ -119,13 +119,11 @@ const Buttons = styled.div`
 	button {
 		cursor: pointer;
 		padding: 19px 10px;
-		font-size: 14px;
 		font-family: poppins;
-		background: transparent;
-		border: 1px solid #f1f1f1;
 	}
 
 	.drop-down-button {
+		border: 1px solid #111111;
 		width: 100%;
 		background: #111111;
 		color: white;
@@ -149,6 +147,14 @@ const Buttons = styled.div`
 `;
 
 const Menu = styled.div`
+	button {
+		color: #4a4a4a;
+		margin: 0;
+		font-size: 14px;
+		background: transparent;
+		border: 1px solid #eeeeee;
+	}
+
 	@media screen and (max-width: 768px) {
 		display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
 		flex-direction: column;
