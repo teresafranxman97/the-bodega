@@ -15,16 +15,12 @@ import {
 const Navbar = () => {
     const [ isOpen, setIsOpen ] = useState(false);
 
-	const closeMenu = () => {
-		setIsOpen(!isOpen)
-	};
-
     return (
 			<NavStyles isOpen={isOpen}>
 				<Hamburger onClick={() => setIsOpen(!isOpen)}>
 					{isOpen ? (
 						<Icon
-							style={{ color: "#4A4A4A", position: "absolute", right: "1rem" }}
+							style={{ color: "white", position: "absolute", right: "1rem" }}
 							icon="ep:close-bold"
 							width={25}
 						/>
@@ -48,13 +44,13 @@ const Navbar = () => {
 					)}
 				</Logo>
 				<Menu isOpen={isOpen}>
-					<MenuLink onClick={() => closeMenu}>
+					<MenuLink>
 						<Link to="products">Products</Link>
 					</MenuLink>
-					<MenuLink onClick={() =>closeMenu}>
+					<MenuLink >
 						<Link to="about">About</Link>
 					</MenuLink>
-					<MenuLink onClick={() => closeMenu}>
+					<MenuLink>
 						<Link to="contact">Contact</Link>
 					</MenuLink>
 				</Menu>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const NavStyles = styled.div`
-	background: ${({ isOpen }) => (isOpen ? "#FFFFFF" : "#ffffff4f")};
+	background: ${({ isOpen }) => (isOpen ? "#111111" : "white")};
 	display: flex;
 	justify-content: space-between;
 	flex-direction: ${({ isOpen }) => (isOpen ? "column" : "row")};
@@ -17,8 +17,8 @@ const NavStyles = styled.div`
 
 	a {
 		text-decoration: none;
-		color: #111111;
-		font-weight: 400;
+		color: ${({ isOpen }) => (isOpen ? "white" : "#111111")};
+		font-weight: 300;
 	}
 
 	@media screen and (min-width: 1440px) {
@@ -52,7 +52,7 @@ const MenuLink = styled.div`
 	padding: 1.5rem;
 	cursor: pointer;
 	text-align: center;
-	font-weight: 400;
+	font-weight: 400; 
 `;
 
 const Icons = styled.div`

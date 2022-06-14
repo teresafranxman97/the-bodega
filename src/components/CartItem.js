@@ -23,12 +23,12 @@ const CartItem = ({ id, image, title, price, amount }) => {
 				<div className="info-container">
 					<h4>{title}</h4>
 					<h5>${price}</h5>
-					<button onClick={() => dispatch(removeItem(id))} >REMOVE</button>
+					<button onClick={() => dispatch(removeItem(id))}>REMOVE</button>
 				</div>
 			</Content>
 			<Amount className="amount">
 				<button onClick={() => dispatch(increaseAmount({ id }))}>
-					<Icon icon="ant-design:plus-outlined" />
+					<Icon icon="ant-design:plus-outlined" style={{ color: "#111111" }} />
 				</button>
 				<p>{amount}</p>
 				<button
@@ -40,7 +40,7 @@ const CartItem = ({ id, image, title, price, amount }) => {
 						dispatch(decreaseAmount({ id }));
 					}}
 				>
-					<Icon icon="ant-design:minus-outlined" />
+					<Icon icon="ant-design:minus-outlined" style={{ color: "#111111" }} />
 				</button>
 			</Amount>
 		</CartItemStyles>

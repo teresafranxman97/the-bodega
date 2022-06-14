@@ -31,6 +31,7 @@ const Content = styled.div`
 	.info-container {
 		width: 15rem;
 		color: #4a4a4a;
+		text-align: left;
 	}
 
 	h4 {
@@ -45,6 +46,7 @@ const Content = styled.div`
 		border: transparent;
 		background: transparent;
 		color: #868686;
+		padding: 0;
 		text-decoration: underline;
 	}
 

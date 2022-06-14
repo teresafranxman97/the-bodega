@@ -48,8 +48,8 @@ const Banner = styled.div`
 		height: 70vh;
 
 		h1 {
-			top: 53vh;
-			font-size: 28px;
+			top: 50vh;
+			font-size: 24px;
 		}
 	}
 `;
@@ -131,6 +131,10 @@ const Container = styled.div`
 			height: 50vh;
 		}
 	}
+
+	@media screen and (min-width: 1440px) {
+		padding: 3rem 15rem;
+	}
 `;
 const Content = styled.div`
 	text-align: center;
@@ -163,6 +167,10 @@ const Content = styled.div`
 
 	@media screen and (min-width: 1024px) {
 		padding: 3rem 10rem;
+	}
+
+	@media screen and (min-width: 1440px) {
+		padding: 3rem 15rem;
 	}
 `;
 
