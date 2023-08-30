@@ -1,12 +1,15 @@
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
-import { Icon } from "@iconify/react";
-import "react-toastify/dist/ReactToastify.css";
-import { Amount } from "../styles/components/CartItemStyles";
-import { addToCart } from "../features/cart/cartSlice";
+import {
+	addToCart
+} from "../features/cart/cartSlice";
+import { increaseProductItemAmount, decreaseProductItemAmount } from "../features/product/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useGetProductByIdQuery } from "../features/api/api";
 
+import { Icon } from "@iconify/react";
+import "react-toastify/dist/ReactToastify.css";
+import { Amount } from "../styles/components/CartItemStyles";
 import {
 	Container,
 	Content,
@@ -18,6 +21,7 @@ import {
 const Product = () => {
 	const { id } = useParams();
 	const { data: product, isLoading } = useGetProductByIdQuery(id);
+	const { productItemAmount } = useSelector((store) => store.product);
 	const dispatch = useDispatch();
 
 	const handleAddToCart = (product) => {
@@ -52,14 +56,14 @@ const Product = () => {
 							<p className="description">{product.description}</p>
 							<Buttons>
 								<Amount className="amount">
-									<button>
+									<button onClick={() => dispatch(increaseProductItemAmount())}>
 										<Icon
 											icon="ant-design:plus-outlined"
 											style={{ color: "#111111" }}
 										/>
 									</button>
-									<p>{}</p>
-									<button>
+									<p>{productItemAmount}</p>
+									<button onClick={() => dispatch(decreaseProductItemAmount())}>
 										<Icon
 											icon="ant-design:minus-outlined"
 											style={{ color: "#111111" }}

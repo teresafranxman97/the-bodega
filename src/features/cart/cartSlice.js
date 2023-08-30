@@ -6,6 +6,7 @@ const initialState = {
 		? JSON.parse(localStorage.getItem("cartItems"))
 		: [],
 	amount: 0,
+	productItemAmount: 0,
 	subtotal: 0,
 	total: 0,
 };
@@ -67,7 +68,7 @@ const cartSlice = createSlice({
 		decreaseAmount: (state, { payload }) => {
 			const cartItem = state.cartItems.find((item) => item.id === payload.id);
 			cartItem.amount = cartItem.amount - 1;
-		},
+		}
 	},
 });
 

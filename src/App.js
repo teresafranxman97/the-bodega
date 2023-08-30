@@ -10,9 +10,6 @@ import Contact from "./sections/Contact";
 import Cart from "./sections/Cart";
 import Dashboard from "./sections/Dashboard";
 import ErrorPage from "./sections/ErrorPage";
-
-import { app } from "./firebaseConfig";
-
 import { ToastContainer } from "react-toastify";
 import { AppStyles, GlobalStyle } from "./styles/GlobalStyles";
 
