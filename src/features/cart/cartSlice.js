@@ -21,8 +21,8 @@ const cartSlice = createSlice({
 			if (itemIndex >= 0) {
 				state.cartItems[itemIndex].amount += 1;
 			} else {
-				const tempProduct = { ...action.payload, amount: 1 };
-				state.cartItems.push(tempProduct);
+				const newProduct = { ...action.payload, amount: 1 };
+				state.cartItems.push(newProduct);
 				toast.success(`Added ${action.payload.title} to cart!`, {
 					position: "bottom-center",
 				});
@@ -43,24 +43,19 @@ const cartSlice = createSlice({
 			let subtotal = 0;
 			let amount = 0;
 			state.cartItems.forEach((item) => {
-				amount += item.amount
-				subtotal += item.amount * item.price			
-			});
-			state.subtotal = subtotal;
-			state.amount = amount;
-		},
-		calculateTotalCost: (state) => {
-			let subtotal = 0;
-			let amount = 0;
-			let total = 0;
-			state.cartItems.forEach((item) => {
 				amount += item.amount;
 				subtotal += item.amount * item.price;
-				total += item.amount * item.price + 7.99;
-			})
-			state.subtotal = subtotal;
+			});
 			state.amount = amount;
-			state.total = Math.round(total * 10) / 10;
+			state.subtotal = Math.round(subtotal * 100) / 100;
+		},
+		calculateTotalCost: (state) => {
+			let total = 0;
+			state.cartItems.forEach((item) => {
+				total += item.amount * item.price;
+			});
+			total = total + 7.99;
+			state.total = Math.round(total * 100) / 100;
 		},
 		increaseAmount: (state, { payload }) => {
 			const cartItem = state.cartItems.find((item) => item.id === payload.id);

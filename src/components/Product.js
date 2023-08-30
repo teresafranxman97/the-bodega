@@ -17,7 +17,6 @@ import {
 
 const Product = () => {
 	const { id } = useParams();
-	const { amount } = useSelector((store) => store.cart);
 	const { data: product, isLoading } = useGetProductByIdQuery(id);
 	const dispatch = useDispatch();
 
@@ -59,7 +58,7 @@ const Product = () => {
 											style={{ color: "#111111" }}
 										/>
 									</button>
-									<p>{amount}</p>
+									<p>{}</p>
 									<button>
 										<Icon
 											icon="ant-design:minus-outlined"
